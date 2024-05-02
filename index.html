@@ -5,25 +5,47 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Something</title>
 	<link rel="stylesheet" href="css/bootstrap.css" />
+	<style>
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+		.bgImage {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			animation: fadeIn 0.5s linear;
+		}
+	</style>
 </head>
 
 <body>
-	<div class="js-clock">
+	<div class="js-clock text-white">
 		<h1>00:00</h1>
 	</div>
 	<form class="js-form d-none">
 		<input type="text" placeholder="What is your name?" />
 	</form>
-	<h4 class="js-greetings d-none"></h4>
+	<h4 class="js-greetings text-white d-none"></h4>
 	<form class="js-toDoForm">
 		<input type="text" placeholder="Write a to do" />
 	</form>
-	<ul class="js-toDoList">
+	<ul class="js-toDoList text-white">
 	</ul>
+	<span class="js-weather"></span>
 	<script src="js/bootstrap.js"></script>
 	<script src="clock.js"></script>
 	<script src="greeting.js"></script>
 	<script src="todo.js"></script>
+	<script src="bg.js"></script>
+	<script src="weather.js"></script>
 </body>
 
 </html>
